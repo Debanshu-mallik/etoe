@@ -18,4 +18,8 @@ jobs:
       - name: build with maven
         run: mvn -b package --file pom.xml
       - name: deploy eapp to tomcat
-        run: 
+        env:
+          tomcatuser: ${{secret.serverusername}}
+          tomcatpwd: ${{secret.serverpassword}}
+        run: curl -v -u $tomcatuser:$tomcatpassword -T 
+          
