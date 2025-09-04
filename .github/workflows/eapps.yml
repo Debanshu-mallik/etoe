@@ -1,7 +1,7 @@
 name: deploy Eapp-to-tomcat
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "feature" ]
 
 
 jobs:
